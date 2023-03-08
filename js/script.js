@@ -1,6 +1,7 @@
 let userPathLenght = prompt('Quanti chilometri vuole percorrere?');
 let userAge = prompt('Inserire la propria età');
 let finalPrice;
+let wishMessage = 'Buon viaggio!!!';
 let message = "Prezzo: ";
 if((!isNaN(userPathLenght)) && (!isNaN(userAge))){ //se è stato inserito un numero allora prosegue con il programma
     userPathLenght = parseInt(userPathLenght); //lo converto in numero
@@ -21,3 +22,4 @@ if((!isNaN(userPathLenght)) && (!isNaN(userAge))){ //se è stato inserito un num
 finalPrice = finalPrice.toFixed(2);//riduco a 2 decimali il prezzo finale
 message = message + finalPrice + '€';// riscrivo il messaggio finale
 document.getElementById('result').innerHTML = message;//lo stampo sulla pagina html
+document.getElementById('wish').innerHTML = wishMessage;
