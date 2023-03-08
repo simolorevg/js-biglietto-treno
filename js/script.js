@@ -1,7 +1,7 @@
 let userPathLenght = prompt('Quanti chilometri vuole percorrere?');
 let userAge = prompt('Inserire la propria età');
 let finalPrice;
-let message;
+let message = "Prezzo: ";
 if((!isNaN(userPathLenght)) && (!isNaN(userAge))){ // se è stato inserito un numero allora prosegue con il programma
     userPathLenght = parseInt(userPathLenght);
     userAge = parseInt(userAge);
