@@ -1,9 +1,9 @@
 let userPathLenght = prompt('Quanti chilometri vuole percorrere?');
+let userAge = prompt('Inserire la propria età');
 let finalPrice;
 let message;
-if(!isNaN(userPathLenght)){ // se è stato inserito un numero allora prosegue con il programma
+if((!isNaN(userPathLenght)) && (!isNaN(userAge))){ // se è stato inserito un numero allora prosegue con il programma
     userPathLenght = parseInt(userPathLenght);
-    let userAge = prompt('Inserire la propria età');
     userAge = parseInt(userAge);
     finalPrice = userPathLenght * 0.21;
     console.log(finalPrice);
@@ -15,7 +15,8 @@ if(!isNaN(userPathLenght)){ // se è stato inserito un numero allora prosegue co
         message = 'Prezzo scontato per Over 65: '
     }
 }else{ // altrimenti blocca tutto
-    console.log('Errore! Dato non inserito correttamente: ricarica la pagina.')
+    message = "ERRORE: DATI NON INSERITI CORRETTAMENTE. RICARICA LA PAGINA!!";
+    document.getElementById('result').innerHTML = message;
 }
 finalPrice = finalPrice.toFixed(2);
 message = message + finalPrice + '€';
