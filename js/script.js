@@ -15,11 +15,10 @@ if((!isNaN(userPathLenght)) && (!isNaN(userAge))){ //se è stato inserito un num
         finalPrice= finalPrice * 0.4;
         message = 'Prezzo scontato per Over 65: '
     }
+    finalPrice = finalPrice.toFixed(2);//riduco a 2 decimali il prezzo finale
+    message = message + finalPrice + '€';// riscrivo il messaggio finale
+    document.getElementById('wish').innerHTML = wishMessage;
 }else{ //altrimenti sono stati messi dato non corretti e blocca tutto
     message = "ERRORE: DATI NON INSERITI CORRETTAMENTE. RICARICA LA PAGINA!!";
-    document.getElementById('result').innerHTML = message;
 }
-finalPrice = finalPrice.toFixed(2);//riduco a 2 decimali il prezzo finale
-message = message + finalPrice + '€';// riscrivo il messaggio finale
-document.getElementById('result').innerHTML = message;//lo stampo sulla pagina html
-document.getElementById('wish').innerHTML = wishMessage;
+document.getElementById('result').innerHTML = message;
