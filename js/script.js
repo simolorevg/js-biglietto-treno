@@ -21,4 +21,4 @@ if((!isNaN(userPathLenght)) && (!isNaN(userAge))){ //se è stato inserito un num
 }else{ //altrimenti sono stati messi dato non corretti e blocca tutto
     message = "ERRORE: DATI NON INSERITI CORRETTAMENTE. RICARICA LA PAGINA!!";
 }
-document.getElementById('result').innerHTML = message;
+document.getElementById('result').innerHTML = message;//stampo messaggio su pagina html
